@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddAppointmentController">
+    <children>
+      <Label layoutX="252.0" layoutY="22.0" text="Add Appointment" />
+      <Button layoutX="534.0" layoutY="358.0" mnemonicParsing="false" onAction="#appointmentTable" text="Cancel" />
+      <Button layoutX="14.0" layoutY="358.0" mnemonicParsing="false" onAction="#saveAppoint" text="Save" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="545.0" AnchorPane.topAnchor="358.0" />
+      <VBox layoutX="162.0" layoutY="50.0" prefHeight="244.0" prefWidth="276.0">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="245.0">
+               <children>
+                  <Label text="Appointment ID" />
+                  <TextField disable="true" promptText="Auto Generated">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="245.0">
+               <children>
+                  <Label text="Title" />
+                  <TextField fx:id="titleField">
+                     <HBox.margin>
+                        <Insets left="103.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="245.0">
+               <children>
+                  <Label text="Description" />
+                  <TextField fx:id="descField">
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="245.0">
+               <children>
+                  <Label text="Location" />
+                  <TextField fx:id="locationField">
+                     <HBox.margin>
+                        <Insets left="80.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label text="Customer ID" />
+                  <TextField fx:id="custID">
+                     <HBox.margin>
+                        <Insets left="58.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label text="User ID" />
+                  <TextField fx:id="userID">
+                     <HBox.margin>
+                        <Insets left="86.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="250.0">
+               <children>
+                  <ComboBox fx:id="type" prefWidth="150.0" promptText="Type">
+                     <HBox.margin>
+                        <Insets left="63.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="contact" prefWidth="150.0" promptText="Contact">
+                     <HBox.margin>
+                        <Insets left="63.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="111.0" layoutY="294.0" prefHeight="71.0" prefWidth="379.0">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="260.0">
+               <children>
+                  <Label text="Start Date/Time" />
+                  <DatePicker fx:id="startField" prefHeight="25.0" prefWidth="125.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="startHour" prefHeight="25.0" prefWidth="70.0" promptText="Hour">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="startMin" prefHeight="25.0" prefWidth="70.0" promptText="Min">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label text="End Date/Time" />
+                  <DatePicker fx:id="endField" prefWidth="125.0">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="endHour" prefHeight="25.0" prefWidth="70.0" promptText="Hour">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="endMin" prefHeight="25.0" prefWidth="70.0" promptText="Min">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
